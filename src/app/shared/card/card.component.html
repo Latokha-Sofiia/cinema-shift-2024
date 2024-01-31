@@ -1,0 +1,11 @@
+
+<div class="border-card-wrapper">
+
+  <div class="card-wrapper">
+    <img src="https://shift-backend.onrender.com{{dataFilm.img}}" class="card-img">
+    <div class="card-title">{{dataFilm.name}}</div>
+    <div *ngFor="let oneDirector of dataFilm.directors" class="card-director">{{oneDirector.fullName}}</div>
+  </div>
+
+</div>
+

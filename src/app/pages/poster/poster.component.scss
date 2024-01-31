@@ -1,0 +1,20 @@
+.heading-title {
+  color: #141C24;
+  font-family: Inter, serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  margin-bottom: 16px;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  //margin: 1px;
+}
+
+.one-card {
+  margin-right: 18px;
+  margin-bottom: 32px;
+}
