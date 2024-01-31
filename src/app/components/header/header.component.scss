@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inter&display=swap');
+
+.empty-field {
+  max-width:  240px;
+  min-width: 20vw;
+}
+
+.header-wrepper {
+  display: flex;
+  width: 100%;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  height: 83.1px;
+  min-width: 674px;
+
+  .item-menu {
+    max-width: 837px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    user-select: none;
+
+    .logo {
+      display: flex;
+      cursor: pointer;
+    }
+
+    .title-text {
+      width: 48px;
+      height: 33.321px;
+      flex-shrink: 0;
+      color: var(--violet-color);
+      font-family: "Fira Sans", serif;
+      font-size: 13.963px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      text-transform: uppercase;
+
+
+    }
+
+    .navigation-text {
+      transition: all .3s;
+      color: #344051;
+      font-family: Inter, serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 24px;
+      padding-left: 32px;
+      &:hover {
+        color: var(--violet-color);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.divider {
+  height: 2px;
+  width: 100%;
+  min-width: 674px;
+  background: var(--rainbow-background);
+  background-size: 200%;
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  backdrop-filter: blur(5px);
+}
+
+
+.exit {
+  display: flex;
+  align-items: center;
+  user-select: none;
+
+  .navigation-text {
+    transition: all .3s;
+
+    color: #344051;
+    font-family: Inter, serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    padding-left: 16px;
+  }
+
+  .navigation-icon {
+    transition: all .3s;
+    color: #65646A;
+    width: 24px;
+    height: 24px;
+  }
+
+  &:hover .navigation-icon {
+    color: var(--violet-color);
+    cursor: pointer;
+  }
+  &:hover .navigation-text {
+    color: var(--violet-color);
+    cursor: pointer;
+  }
+}
+
