@@ -43,7 +43,7 @@
 
     .navigation-text {
       transition: all .3s;
-      color: #344051;
+      color: var(--violet-color);
       font-family: Inter, serif;
       font-size: 16px;
       font-style: normal;
@@ -51,7 +51,7 @@
       line-height: 24px;
       padding-left: 32px;
       &:hover {
-        color: var(--violet-color);
+        color: white;
         cursor: pointer;
       }
     }
@@ -78,7 +78,7 @@
   .navigation-text {
     transition: all .3s;
 
-    color: #344051;
+    color: var(--violet-color);
     font-family: Inter, serif;
     font-size: 16px;
     font-style: normal;
@@ -89,17 +89,17 @@
 
   .navigation-icon {
     transition: all .3s;
-    color: #65646A;
+    color: var(--violet-color);
     width: 24px;
     height: 24px;
   }
 
   &:hover .navigation-icon {
-    color: var(--violet-color);
+    color: white;
     cursor: pointer;
   }
   &:hover .navigation-text {
-    color: var(--violet-color);
+    color: white;
     cursor: pointer;
   }
 }
