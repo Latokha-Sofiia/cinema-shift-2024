@@ -4,7 +4,9 @@
   <div class="card-wrapper">
     <img src="https://shift-backend.onrender.com{{dataFilm.img}}" class="card-img">
     <div class="card-title">{{dataFilm.name}}</div>
-    <div *ngFor="let oneDirector of dataFilm.directors" class="card-director">{{oneDirector.fullName}}</div>
+    <div class="wrapper-card-director">
+      <div *ngFor="let oneDirector of dataFilm.directors" class="card-director">{{oneDirector.fullName}}.</div>
+    </div>
 <!--    <img src="assets/star.svg" class="card-star">-->
   </div>
 

@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  //overflow: hidden;
+
 }
 
 :root {
@@ -19,4 +21,8 @@
 body {
   background: #131129;
   color: white;
+}
+
+::-webkit-scrollbar {
+  width: 0;
 }
