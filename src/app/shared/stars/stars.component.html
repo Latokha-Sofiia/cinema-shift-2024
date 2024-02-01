@@ -1,0 +1,10 @@
+<div class="rating-stars">
+  <div *ngFor="let oneStar of isStarsYellow">
+    <div *ngIf="oneStar; else grayStar">
+      <img src="assets/yellow-star.svg" />
+    </div>
+    <ng-template #grayStar>
+      <img src="assets/gray-star.svg" />
+    </ng-template>
+  </div>
+</div>
