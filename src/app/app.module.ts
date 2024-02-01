@@ -4,15 +4,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import {IconComponent} from "./shared/icon/icon.component";
+import { IconComponent } from './shared/icon/icon.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { PosterComponent } from './pages/poster/poster.component';
 import { TicketsComponent } from './pages/tickets/tickets.component';
 import { CardComponent } from './shared/card/card.component';
-import {DataFilmsService} from "./pages/poster/data-films.service";
+import { DataFilmsService } from './pages/poster/data-films.service';
 import { HttpClientModule } from '@angular/common/http';
-import {FormsModule, ReactiveFormsModule} from "@angular/forms";
-
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MovieCardComponent } from './pages/movie-card/movie-card.component';
+import { StarsComponent } from './shared/stars/stars.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     PosterComponent,
     TicketsComponent,
     CardComponent,
-
+    MovieCardComponent,
+    StarsComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,6 +36,6 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
   ],
   exports: [IconComponent],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -1,18 +1,15 @@
 .card-wrapper {
   width: 199px;
-  height: 400px;
+  height: 425px;
   background: #1d1932;
   border-radius: 8px;
   margin-left: 2px;
   user-select: none;
-  &:hover {
-    box-shadow:  3px 3px #5037af, 1px 1px .4em red;
-  }
 }
 
 .border-card-wrapper {
   width: 203px;
-  height: 404px;
+  height: 429px;
 
   display: flex;
   align-items: center;
@@ -22,15 +19,55 @@
   background: var(--rainbow-background);
   background-size: 400%;
   animation: glowing 40s linear infinite;
-  transition: opacity .3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
   backdrop-filter: blur(5px);
+}
+
+.card-main-part {
+  height: 55px;
+  margin-bottom: 5px;
+}
+
+.rating {
+  height: 55px;
+  margin-bottom: 5px;
+  padding-left: 9px;
+}
+
+.card-bottom-part {
+  padding-left: 11px;
+  padding-bottom: 5px;
+  height: 55px;
+
+  .button-more {
+    text-align: center;
+    border-radius: 9px;
+    background: var(--violet-color);
+    color: #fff;
+    font-size: 13px;
+    width: 95%;
+    height: 34px;
+
+    &:hover {
+      color: #1d1932;
+      //background-color: #5037af;
+      font-size: 14px;
+      font-weight: 600;
+      background: var(--rainbow-background);
+      background-size: 300%;
+      animation: glowing 40s linear infinite;
+      transition: opacity 0.3s ease-in-out;
+      backdrop-filter: blur(5px);
+      border: white;
+      cursor: pointer;
+    }
+  }
 }
 
 .card-img {
   width: 100%;
   height: 250px;
   margin-bottom: 10px;
-  border-radius: 8px;
   user-select: none;
 }
 
@@ -50,16 +87,23 @@
   font-size: 10px;
   font-weight: 400;
   line-height: 20px;
-  margin-bottom: 10px;
   user-select: none;
 }
 
-.wrapper-card-director{
+.wrapper-card-director {
   display: flex;
   user-select: none;
 }
 
 .card-star {
-  color: blue;
+  padding-left: 9px;
   user-select: none;
+  height: 15px;
+}
+
+.text-rating {
+  user-select: none;
+  color: #637083;
+  font-size: 10px;
+  font-family: Inter;
 }
