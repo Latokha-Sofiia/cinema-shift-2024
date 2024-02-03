@@ -14,6 +14,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MovieCardComponent } from './pages/movie-card/movie-card.component';
 import { StarsComponent } from './shared/stars/stars.component';
+import { SeatControlComponent } from './components/seat-control/seat-control.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { StarsComponent } from './shared/stars/stars.component';
     CardComponent,
     MovieCardComponent,
     StarsComponent,
+    SeatControlComponent,
   ],
   imports: [
     BrowserModule,

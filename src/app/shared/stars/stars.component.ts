@@ -9,12 +9,12 @@ export class StarsComponent {
   isStarsYellow: boolean[] = Array(5).fill(false);
   private _stars!: string;
   @Input()
-  get stars(): string {
+  get stars(): string | undefined {
     return this._stars;
   }
 
   set stars(value) {
-    if (value !== this.stars) {
+    if ((value !== this.stars) && (value !== undefined)) {
       this._stars = value;
       const starsNumber: number = Math.round(Number(value) / 2);
       this.isStarsYellow = this.isStarsYellow.map((value, index) => {

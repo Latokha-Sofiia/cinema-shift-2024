@@ -1,0 +1,41 @@
+<div class="choosing-seat-and-pay">
+  <div class="choosing-seat">
+    <div class="text-screen">Экран</div>
+    <div class="screen"></div>
+    <div class="row-text">Ряд</div>
+    <div class="rows" *ngFor="let oneRow of seatsInfo; let rowIndex = index">
+      <div class="one-row-text">{{ rowIndex + 1 }}</div>
+      <div class="one-row">
+        <div *ngFor="let onePlace of oneRow; let columnIndex = index">
+          <div
+            class="one-place"
+            [ngClass]="{
+              chosen: onePlace.state === ESeatState.chosen,
+              free: onePlace.state === ESeatState.free,
+              taken: onePlace.state === ESeatState.taken
+            }"
+            (click)="choosePlace(rowIndex, columnIndex)"
+          ></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="info-and-payment">
+    <div class="one-info">
+      <div class="info-title">Зал</div>
+      <div class="info-text">{{ getColorHall() }}</div>
+    </div>
+
+    <div class="one-info">
+      <div class="info-title">Дата и время</div>
+      <div class="info-text">{{ getDateAndTime() }}</div>
+    </div>
+
+    <div class="one-info">
+      <div class="info-title">Места</div>
+      <div class="info-text" *ngFor="let oneSeat of selectedSeats">ряд {{ oneSeat.row + 1}}, место {{oneSeat.column + 1}}</div>
+    </div>
+
+  </div>
+</div>

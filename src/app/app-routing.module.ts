@@ -19,7 +19,7 @@ const routes: Routes = [
     component: PosterComponent,
   },
   {
-    path: 'movie-card',
+    path: 'movie-card/:id',
     component: MovieCardComponent,
   },
   {

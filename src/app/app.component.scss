@@ -2,7 +2,8 @@
   min-height: 1024px;
   display: flex;
   user-select: none;
-  padding-top: 48px;
+  padding-top: 20px;
+  min-width: 700px;
   background: linear-gradient(#131129 10%, rgb(0, 0, 0));
 }
 
@@ -42,4 +43,5 @@
   background-image: url(/assets/backStar.png);
   background-size: 100%;
   min-width: 750px;
+  width: 100%;
 }

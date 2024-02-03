@@ -1,1 +1,118 @@
-<p>movie-card works!</p>
+<div class="back-button" routerLink="/poster">< Назад</div>
+<div class="film-content">
+  <div class="img-wrapper">
+    <img
+      src="https://shift-backend.onrender.com{{ dataFilm?.img }}"
+      class="film-img"
+    />
+    <div class="img-description-wrapper">
+      <div class="img-description">
+        <div class="img-description-genres">{{ dataFilm?.genres }}</div>
+        <div class="img-description-data-country">
+          {{ dataFilm?.releaseDate }} {{ dataFilm?.country?.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="description">
+    <div class="film-name">{{ dataFilm?.name }}</div>
+
+    <div
+      *ngFor="let oneDirector of dataFilm?.directors"
+      class="description-film"
+    >
+      {{ oneDirector.fullName }}.
+    </div>
+
+    <app-stars
+      [stars]="dataFilm?.userRatings?.kinopoisk"
+      class="stars"
+    ></app-stars>
+    <div class="text-rating">
+      Kinopoisk - {{ dataFilm?.userRatings?.kinopoisk }}
+    </div>
+
+    <div
+      class="description-film"
+      [ngClass]="{
+        'description-close': !isDescriptionOpen
+      }"
+    >
+      {{ dataFilm?.description }}
+    </div>
+    <button
+      *ngIf="!isDescriptionOpen"
+      (click)="openDescription()"
+      class="button-more"
+    >
+      раскрыть
+    </button>
+  </div>
+</div>
+
+<div class="title">Расписание</div>
+
+<div class="wrapper-timetable">
+  <div class="wrapper-time-date">
+    <div
+      *ngFor="let oneTime of dataTimetable"
+      class="time-date"
+      (click)="dateTimeActive(oneTime.date)"
+      [ngClass]="{
+        'time-date-open': dateTime === oneTime.date
+      }"
+    >
+      {{ oneTime.date }}
+    </div>
+  </div>
+
+  <div class="seances-in-halls">
+    <div class="seances-in-one-hall">
+      <div class="cinema-hall-text">Красный зал</div>
+      <div
+        class="time-hall"
+        *ngFor="let oneSeance of seancesInRedHall"
+        (click)="seancesTimeActive(oneSeance.time, 'Красный зал')"
+        [ngClass]="{
+          'seances-time-open': seanceTime === oneSeance.time
+        }"
+      >
+        {{ oneSeance.time }}
+      </div>
+    </div>
+
+    <div class="seances-in-one-hall">
+      <div class="cinema-hall-text">Синий зал</div>
+      <div
+        class="time-hall"
+        *ngFor="let oneSeance of seancesInBlueHall"
+        (click)="seancesTimeActive(oneSeance.time, 'Синий зал')"
+        [ngClass]="{
+          'seances-time-open': seanceTime === oneSeance.time
+        }"
+      >
+        {{ oneSeance.time }}
+      </div>
+    </div>
+
+    <div class="seances-in-one-hall">
+      <div class="cinema-hall-text">Зеленый зал</div>
+      <div
+        class="time-hall"
+        *ngFor="let oneSeance of seancesInGreenHall"
+        (click)="seancesTimeActive(oneSeance.time, 'Зеленый зал')"
+        [ngClass]="{
+          'seances-time-open': seanceTime === oneSeance.time
+        }"
+      >
+        {{ oneSeance.time }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="title">Выбор места</div>
+<app-seat-control></app-seat-control>
+
+<!--<pre>{{ dataFilm | json }}</pre>-->
